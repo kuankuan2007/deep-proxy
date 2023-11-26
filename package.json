@@ -1,0 +1,22 @@
+{
+  "name": "@kuankuan/deep-porxy",
+  "version": "0.1.0",
+  "description": "Recursively proxy some object",
+  "main": "./lib/index.js",
+  "author": {
+    "name": "kuankuan"
+  },
+  "license": "MulanPSL-2.0",
+  "files": [
+    "./lib/**/*"
+  ],
+  "typings": "./lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint -c tslint.json src/**/*.ts",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
