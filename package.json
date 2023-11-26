@@ -1,5 +1,5 @@
 {
-  "name": "@kuankuan/deep-porxy",
+  "name": "@kuankuan/deep-proxy",
   "version": "0.1.0",
   "description": "Recursively proxy some object",
   "main": "./lib/index.js",
