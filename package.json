@@ -2,9 +2,12 @@
   "name": "@kuankuan/deep-proxy",
   "version": "0.1.0",
   "description": "Recursively proxy some object",
-  "main": "./lib/index.js",
+  "main": "./lib/index.cjs",
+  "module": "./lib/index.mjs",
   "author": {
-    "name": "kuankuan"
+    "name": "kuankuan",
+    "email": "2163826131@qq.com",
+    "url": "https://kuankuan.site/"
   },
   "license": "MulanPSL-2.0",
   "files": [
@@ -12,11 +15,22 @@
   ],
   "typings": "./lib/index.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "node ./assist/build.js",
     "lint": "tslint -c tslint.json src/**/*.ts",
     "prepublish": "npm run build"
   },
   "devDependencies": {
     "typescript": "^5.2.2"
+  },"exports":{
+    ".":{
+      "require":{
+        "default":"./lib/index.cjs",
+        "types":"./lib/index.d.ts"
+      },
+      "import":{
+        "default":"./lib/index.mjs",
+        "types":"./lib/index.d.mts"
+      }
+    }
   }
 }
